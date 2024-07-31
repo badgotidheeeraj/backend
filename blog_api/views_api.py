@@ -16,7 +16,6 @@ from rest_framework.pagination import PageNumberPagination
 from django.utils import timezone
 from .email_send import emailsender  # Make sure to import your utility function
 
-from django.contrib.auth.models import User
 
  
 @api_view(['GET'])
@@ -27,23 +26,12 @@ def welcome(request):
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
-
-def login(request):
+def login(request): 
     serializer = LoginSerializer(data=request.data)
     if serializer.is_valid():
-        username_or_email = serializer.validated_data['username_or_email']
+        username = serializer.validated_data['username']
         password = serializer.validated_data['password']
-
-        # Try to authenticate with username
-        user = authenticate(username=username_or_email, password=password)
-
-        if user is None:
-            # If not successful, try to authenticate with email
-            try:
-                user_obj = User.objects.get(email=username_or_email)
-                user = authenticate(username=user_obj.username, password=password)
-            except User.DoesNotExist:
-                pass
+        user = authenticate(username=username, password=password)
 
         if user is not None:
             refresh = RefreshToken.for_user(user)

@@ -1,18 +1,12 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import BlogWriter, UserProfile,DigitalMarketPost
+
+
 class LoginSerializer(serializers.Serializer):
-    username_or_email = serializers.CharField()
-    password = serializers.CharField()
+    username = serializers.CharField()
+    password = serializers.CharField(write_only=True)
 
-    def validate(self, data):
-        username_or_email = data.get('username_or_email')
-        password = data.get('password')
-
-        if not username_or_email or not password:
-            raise serializers.ValidationError("Both username/email and password are required.")
-
-        return data
 
 class BlogerSerializer(serializers.ModelSerializer):
 
