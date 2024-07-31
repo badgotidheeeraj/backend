@@ -66,8 +66,8 @@ def sign_up(request):
 @permission_classes([IsAuthenticated])
 def BlogShow(request):
     try:
-        paginator = PageNumberPagination()
-        paginator.page_size = 3
+        # paginator = PageNumberPagination()
+        # paginator.page_size = 3
         search_query = request.query_params.get("search", '')
         module_name = request.query_params.get("category", '')
 
@@ -82,25 +82,25 @@ def BlogShow(request):
             all_requests = all_requests.filter(
                 cat__icontains=module_name)
         if hasattr(all_requests, '__iter__'):
-            paginated_queryset = paginator.paginate_queryset(
-                all_requests, request)
+            # paginated_queryset = paginator.paginate_queryset(
+            #     all_requests, request)
             serialized_data = BlogerSerializer(
-                paginated_queryset, many=True)
-            current_page = paginator.page.number
-            total_pages = paginator.page.paginator.num_pages
-            next_page = current_page + 1 if paginator.page.has_next() else None
-            prev_page = current_page - 1 if paginator.page.has_previous() else None
+                all_requests, many=True)
+            # current_page = paginator.page.number
+            # total_pages = paginator.page.paginator.num_pages
+            # next_page = current_page + 1 if paginator.page.has_next() else None
+            # prev_page = current_page - 1 if paginator.page.has_previous() else None
         response_data = {
             'success': True,
             'message': 'Request fetched successfully',
             "data": serialized_data.data,
-            "pagination": {
-                "total_records": paginator.page.paginator.count,
-                "current_page": current_page,
-                "total_pages": total_pages,
-                "next_page": next_page,
-                "prev_page": prev_page,
-            }
+            # "pagination": {
+            #     "total_records": paginator.page.paginator.count,
+            #     "current_page": current_page,
+            #     "total_pages": total_pages,
+            #     "next_page": next_page,
+            #     "prev_page": prev_page,
+            # }
         }
         return Response(response_data, status=status.HTTP_200_OK)
     except Exception as e:
