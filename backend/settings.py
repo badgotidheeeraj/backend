@@ -9,15 +9,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-@j%_q!w@gv3^+$$e)-trc8@s&w%8n4t83x%xms#nacs%!gdq-)'
-SECRET_KEY = os.environ.get('SECRET_KEY')#'django-insecure-@j%_q!w@gv3^+$$e)-trc8@s&w%8n4t83x%xms#nacs%!gdq-)'
+SECRET_KEY = 'django-insecure-@j%_q!w@gv3^+$$e)-trc8@s&w%8n4t83x%xms#nacs%!gdq-)'
+# SECRET_KEY = os.environ.get('SECRET_KEY')#'django-insecure-@j%_q!w@gv3^+$$e)-trc8@s&w%8n4t83x%xms#nacs%!gdq-)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = os.environ.get("DEBUG","False").lower()=="true"
 
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(' ')
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(' ')
 
 # Application definition
 
@@ -78,8 +78,8 @@ SIMPLE_JWT = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ALLOWED_ORIGINS = ['http://localhost:3000','http://192.168.164.50:3000', 'http://192.168.29.224:3000']
-CORS_ALLOWED_ORIGINS=os.environ.get('CORS_ALLOWED_ORIGINS')
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000','http://192.168.164.50:3000', 'http://192.168.29.224:3000']
+# CORS_ALLOWED_ORIGINS=os.environ.get('CORS_ALLOWED_ORIGINS')
 # [
 #     'http://localhost:3000', ' http://192.168.29.3:3000'
 # ]
@@ -120,8 +120,8 @@ DATABASES = {
     }
 }
 
-databaseline=os.environ.get('DATABASES')
-DATABASES["default"]=dj_database_url.parse(databaseline)
+# databaseline=os.environ.get('DATABASES')
+# DATABASES["default"]=dj_database_url.parse(databaseline)
 # DATABASES["default"]=dj_database_url.parse('postgresql://blogger_database_cb5e_user:jZLk6EsGCIZfTsNR2a02y3EZZ3PBSMVy@dpg-cqkbq7qju9rs738kf6k0-a.oregon-postgres.render.com/blogger_database_cb5e')
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

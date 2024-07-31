@@ -16,6 +16,7 @@ from rest_framework.pagination import PageNumberPagination
 from django.utils import timezone
 from .email_send import emailsender  # Make sure to import your utility function
 
+from django.contrib.auth.models import User
 
  
 @api_view(['GET'])
@@ -26,12 +27,23 @@ def welcome(request):
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
-def login(request): 
+
+def login(request):
     serializer = LoginSerializer(data=request.data)
     if serializer.is_valid():
-        username = serializer.validated_data['username']
+        username_or_email = serializer.validated_data['username_or_email']
         password = serializer.validated_data['password']
-        user = authenticate(username=username, password=password)
+
+        # Try to authenticate with username
+        user = authenticate(username=username_or_email, password=password)
+
+        if user is None:
+            # If not successful, try to authenticate with email
+            try:
+                user_obj = User.objects.get(email=username_or_email)
+                user = authenticate(username=user_obj.username, password=password)
+            except User.DoesNotExist:
+                pass
 
         if user is not None:
             refresh = RefreshToken.for_user(user)
@@ -71,8 +83,7 @@ def BlogShow(request):
         search_query = request.query_params.get("search", '')
         module_name = request.query_params.get("category", '')
 
-        all_requests = BlogWriter.objects.filter(
-            userAccount=request.user).order_by('-DateTime')
+        all_requests = BlogWriter.objects.all().order_by('-DateTime')
         # print(BlogWriter.objects.filter(
         #     userAccount__user=request.user))#.order_by('-DateTime'))
 
