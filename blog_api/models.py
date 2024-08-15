@@ -63,12 +63,11 @@ class Comment(models.Model):
     
 class UserProfile(models.Model):
     userAccount = models.OneToOneField(User, on_delete=models.CASCADE)
-    balance = models.DecimalField(max_digits=10, decimal_places=2, default=1000.00)  # Default balance
-    Adress = models.CharField(max_length=255, blank=True)
-    City = models.CharField(max_length=100, blank=True)
-    phoneNo = models.CharField(max_length=15, blank=True)
-    profilePic = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
-    state = models.CharField(max_length=100, blank=True)
+    profilePic = models.ImageField(upload_to='profile_pics/', null=True, blank=True)
+    phoneNo = models.CharField(max_length=15, null=True, blank=True)
+    state = models.CharField(max_length=100, null=True, blank=True)
+    city = models.CharField(max_length=100, null=True, blank=True)
+    address = models.TextField(null=True, blank=True)
 
     
 

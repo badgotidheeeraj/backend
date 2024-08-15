@@ -34,10 +34,8 @@ INSTALLED_APPS = [
     'blog_api',
     'cloudinary_storage',
     'cloudinary',
-    'django_crontab'
+    
 ]
-
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,7 +81,7 @@ SIMPLE_JWT = {
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:3000 http://192.168.164.50:3000 http://192.168.29.224:3000').split()
+CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:3000').split()
 
 CORS_ALLOW_METHODS = (
     "DELETE",
@@ -118,12 +116,13 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL', 'sqlite:///db.sqlite3'))
 }
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL', 'sqlite:///db.sqlite3'))
-}
 
 # extract
 databaseurl=os.environ.get("DATABASE_URL")
+# postgresql://blogger_database_cb5e_user:jZLk6EsGCIZfTsNR2a02y3EZZ3PBSMVy@dpg-cqkbq7qju9rs738kf6k0-a.oregon-postgres.render.com/blogger_database_cb5e
+
+
+
 DATABASES["default"]=dj_database_url.parse(databaseurl)
 AAUTH_PASSWORD_VALIDATORS = [
     {
@@ -157,15 +156,14 @@ CLOUDINARY_STORAGE = {
     'PREFIX': 'media/',
 }
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-CRONJOBS = [
-    ('* * * * *', 'blog_api.cron.handle'),  # Runs every minute
-]
+
 
 APPEND_SLASH = False
 

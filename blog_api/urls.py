@@ -2,20 +2,18 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from . import views_api
-from .views_api import AzureADLoginView, DigitalMarketPostListCreate, PriceForAddListCreate
+from .views_api import (AzureADLoginView, DigitalMarketPostListCreate, PriceForAddListCreate,UserProfileView,Blogger,singIN,CommentListCreateView,)
 
 urlpatterns = [
     path('', views_api.welcome),
     path('login', views_api.login),
-    path('bloger-creater', views_api.BlogWrite),
-    path('sign-up', views_api.sign_up),
-    path('show-blogger', views_api.BlogShow),
-    path('show-userProfile', views_api.get_userData),
-    path('add-campaign', views_api.digital_market_post_list),
-    # path('add-createPost',views_api.createAddPost),
+    path('sign-up', singIN.as_view()),
+    path('user-profile', UserProfileView.as_view(), name='userProfile'),
+    path('Blogger', Blogger.as_view(), name='userProfile'),
+     path('Blogger/<int:id>/', Blogger.as_view(), name='blog_detail'),
+    # path('add-campaign',DigitalMarketPostList.as_view()),
     path('delete/<int:id>', views_api.makedelete,),
-    path('blogs/<int:id>/', views_api.BlogShowID),
-    path('comments/', views_api.comment_list_create_view),
+    path('comments/',CommentListCreateView.as_view()),
     path('auth/azure/login/', AzureADLoginView.as_view(), name='azure_ad_login'),
      path('api/digitalmarketpost/', DigitalMarketPostListCreate.as_view(), name='digitalmarketpost-list-create'),
     path('api/priceforadd/', PriceForAddListCreate.as_view(), name='priceforadd-list-create'),

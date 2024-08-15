@@ -8360,3 +8360,640 @@ django.core.exceptions.ImproperlyConfigured: Field name `content` is not valid f
 Unauthorized: /api/priceforadd/
 Unauthorized: /show-blogger
 Unauthorized: /add-campaign
+Unauthorized: /api/priceforadd/
+Unauthorized: /add-campaign
+Unauthorized: /show-blogger
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Not Found: /favicon.ico
+Bad Request: /bloger-creater
+Unauthorized: /bloger-creater
+Unauthorized: /bloger-creater
+Unauthorized: /bloger-creater
+Unauthorized: /bloger-creater
+Unauthorized: /bloger-creater
+Unauthorized: /api/priceforadd/
+Unauthorized: /show-blogger
+Unauthorized: /add-campaign
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Not Found: /media/media/digital_market_images/ask_ry4s4y
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /login
+Unauthorized: /api/priceforadd/
+Unauthorized: /show-blogger
+Unauthorized: /add-campaign
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Bad Request: /bloger-creater
+Not Found: /favicon.ico
+Internal Server Error: /bloger-creater
+Traceback (most recent call last):
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/home/me/Downloads/Bogger/backend/blog_api/views_api.py", line 154, in BlogWrite
+    if serialized_data.is_valid():
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 495, in to_internal_value
+    for field in fields:
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 378, in _writable_fields
+    for field in self.fields.values():
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/me/Downloads/Bogger/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `blog` is not valid for model `BlogWriter` in `blog_api.serializer.BlogerSerializer`.
+Internal Server Error: /show-blogger
+Method Not Allowed: /auth/azure/login/
+Internal Server Error: /show-blogger
+Internal Server Error: /show-blogger
+Internal Server Error: /show-blogger
+Not Found: /media/media/digital_market_images/Screenshot_from_2024-06-14_12-18-40_vpkchc
+Unauthorized: /api/priceforadd/
+Unauthorized: /show-blogger
+Unauthorized: /add-campaign
+Not Found: /favicon.ico
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Method Not Allowed: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile/
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Bad Request: /login
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile-fetch
+Not Found: /show-userProfile-fetch
+Not Found: /show-userProfile-fetch
+Not Found: /show-userProfile-fetch
+Not Found: /show-userProfile-fetch
+Not Found: /show-userProfile-fetch
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Internal Server Error: /show-userProfile
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_api_userprofile.address
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/me/Downloads/Blogger/backend/blog_api/views_api.py", line 157, in get
+    user_profile = UserProfile.objects.get(userAccount=request.user)
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_api_userprofile.address
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Connection pool is full, discarding connection: api.cloudinary.com
+Internal Server Error: /admin/blog_api/userprofile/add/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1657, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1586, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/usr/lib/python3/dist-packages/django/contrib/admin/options.py", line 1099, in save_model
+    obj.save()
+  File "/usr/lib/python3/dist-packages/django/db/models/base.py", line 739, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/usr/lib/python3/dist-packages/django/db/models/base.py", line 776, in save_base
+    updated = self._save_table(
+  File "/usr/lib/python3/dist-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/usr/lib/python3/dist-packages/django/db/models/base.py", line 919, in _do_insert
+    return manager._insert(
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: database is locked
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /show-userProfile
+Unauthorized: /show-userProfile
+Not Found: /show-userProfile
+Not Found: /user-profile
+Not Found: /user-profile/
+Not Found: /user-profile
+Not Found: /user-profile/
+Not Found: /show-userProfile
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Unauthorized: /api/priceforadd/
+Unauthorized: /Blogger
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /Blogger
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: Blogger.get() missing 1 required positional argument: 'id'
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /Blogger
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: Blogger.get() missing 1 required positional argument: 'id'
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /Blogger
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: Blogger.get() missing 1 required positional argument: 'id'
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /Blogger
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: Blogger.get() missing 1 required positional argument: 'id'
+Unauthorized: /api/priceforadd/
+Unauthorized: /Blogger
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /Blogger
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: Blogger.get() missing 1 required positional argument: 'id'
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Not Found: /blogs/1/
+Not Found: /blogs/1/
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Not Found: /blogs/1/
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Not Found: /blogger/1/
+Not Found: /blogger/1/
+Not Found: /blogger/1/
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Not Found: /blogger/1/
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Forbidden (CSRF token missing or incorrect.): /admin/login/
+Forbidden (CSRF token missing or incorrect.): /admin/login/
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Internal Server Error: /add-campaign
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/me/.local/lib/python3.10/site-packages/corsheaders/middleware.py", line 57, in __call__
+    assert isinstance(result, HttpResponseBase)
+AssertionError
+Not Found: /add-campaign
+Internal Server Error: /api/digitalmarketpost/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/me/Downloads/Blogger/backend/blog_api/views_api.py", line 262, in post
+    user_balance.TotalPrice -= Decimal(5.00) or 5.00
+NameError: name 'Decimal' is not defined
+Internal Server Error: /api/digitalmarketpost/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/me/Downloads/Blogger/backend/blog_api/views_api.py", line 262, in post
+    user_balance.TotalPrice -= Decimal(5.00) or 5.00
+NameError: name 'Decimal' is not defined
+Internal Server Error: /api/digitalmarketpost/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/me/Downloads/Blogger/backend/blog_api/views_api.py", line 262, in post
+    user_balance.TotalPrice -= Decimal(5.00) or 5.00
+NameError: name 'Decimal' is not defined
+Internal Server Error: /api/digitalmarketpost/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/me/Downloads/Blogger/backend/blog_api/views_api.py", line 262, in post
+    user_balance.TotalPrice -= Decimal(5) or 5
+NameError: name 'Decimal' is not defined
+Internal Server Error: /api/digitalmarketpost/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/me/.local/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/me/Downloads/Blogger/backend/blog_api/views_api.py", line 262, in post
+    user_balance.TotalPrice -= Decimal(5) or 5
+NameError: name 'Decimal' is not defined
+Unauthorized: /api/priceforadd/
+Unauthorized: /Blogger
+Unauthorized: /api/digitalmarketpost/
+Bad Request: /login
+Unauthorized: /api/priceforadd/
+Unauthorized: /api/digitalmarketpost/
+Unauthorized: /Blogger
+Bad Request: /login
+Unauthorized: /api/priceforadd/
+Unauthorized: /api/digitalmarketpost/
+Unauthorized: /Blogger
+Not Found: /show-userProfile

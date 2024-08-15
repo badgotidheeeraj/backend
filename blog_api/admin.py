@@ -9,7 +9,7 @@ class BlogRegister(admin.ModelAdmin):
 
 @admin.register(UserProfile)
 class BlogRegisterCreate(admin.ModelAdmin):
-    list_display = ['userAccount', 'profilePic', 'phoneNo', 'state', 'City', 'Adress', ]
+    list_display = ['userAccount', 'profilePic', 'phoneNo', 'state', 'city', 'address']
     
     
 @admin.register(DigitalMarketPost)

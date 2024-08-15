@@ -19,37 +19,22 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = ['id', 'blog', 'author', 'text', 'created_at']
         read_only_fields = ['author', 'created_at']
-# class CommentSerializer(serializers.ModelSerializer):
-#     author_name = serializers.CharField(source='author.username', read_only=True)
-    
-#     class Meta:
-#         model = Comment
-#         fields = ['id', 'content', 'created_at', 'author_name', 'blog']
+        
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'last_name', 'password']
-        extra_kwargs = {'password': {'write_only': True}}
-
-    def create(self, validated_data):
-        user = User(
-            email=validated_data['email'],
-            first_name=validated_data['first_name'],
-            last_name=validated_data['last_name'],
-            username=validated_data['username'],
-        )
-        user.set_password(validated_data['password'])
-        user.save()
-        return user
+        fields = ['id', 'username', 'email','first_name','last_name']  # Adjust fields as necessary
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    userAccount = UserSerializer(read_only=True)  # Correctly reference the user data
+    userAccount = UserSerializer(read_only=True)  # Reference to the user data
 
     class Meta:
         model = UserProfile
-        fields = ['id', 'userAccount', 'profilePic', 'phoneNo', 'state', 'City', 'Adress']
+        fields = ['id','userAccount', 'profilePic', 'phoneNo', 'state', 'city', 'address',]
     
+    
+
 class PosterSerializer(serializers.ModelSerializer):
     author = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), required=False)
 
@@ -62,10 +47,6 @@ class PosterSerializer(serializers.ModelSerializer):
         if request and hasattr(request, "user"):
             validated_data['author'] = request.user
         return super().create(validated_data)
-    
-    
-    
-    
     
     
 class DigitalMarketPostSerializer(serializers.ModelSerializer):
