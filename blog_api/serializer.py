@@ -68,3 +68,14 @@ class PriceForAddSerializer(serializers.ModelSerializer):
             'TranctionsAmount', 'DateTime', 'description', 'post'
         ]
         read_only_fields = ['id', 'DateTime', 'TotalPrice', 'TranctionsAmount']
+
+
+# add this into main
+
+from rest_framework import serializers
+from .models import UserActivityLog
+
+class UserActivityLogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserActivityLog
+        fields = '__all__'

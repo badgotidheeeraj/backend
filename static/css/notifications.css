@@ -1,0 +1,14 @@
+.nav-item .fa-bell {
+    font-size: 20px;
+    color: #ffcc00;
+    margin-right: 15px;
+}
+
+#notificationCount {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 50%;
+}

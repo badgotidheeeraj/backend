@@ -301,3 +301,47 @@ class PriceForAddListCreate(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    
+    
+    
+    
+    
+#  log of user ?
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from django.contrib.auth.models import User
+from .models import UserActivityLog
+from django.utils.timezone import now
+import json
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])  # Only authenticated users can perform actions
+def log_user_action(request):
+    """
+    Log user activity from the frontend.
+    Expected JSON:
+    {
+        "action": "User logged in",
+        "ip_address": "192.168.1.1",
+        "user_agent": "Mozilla/5.0"
+    }
+    """
+    user = request.user
+    action = request.data.get("action")
+    ip_address = request.data.get("ip_address")
+    user_agent = request.data.get("user_agent")
+
+    if not action:
+        return Response({"error": "Action is required"}, status=400)
+
+    # Create log entry
+    UserActivityLog.objects.create(
+        user=user,
+        action=action,
+        ip_address=ip_address,
+        user_agent=user_agent
+    )
+
+    return Response({"message": "User action logged successfully!"}, status=201)

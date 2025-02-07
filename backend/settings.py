@@ -1,10 +1,7 @@
 import os
 from pathlib import Path
 from datetime import timedelta
-import dj_database_url
 from dotenv import load_dotenv
-from django.utils.archive import extract
-
 # Load environment variables from .env file
 load_dotenv()
 
@@ -22,20 +19,40 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    # 🔹 Admin & UI Enhancements
+    'jazzmin',  # Admin theme
+    'admin_interface',  # Custom admin UI
+    'colorfield',  # Required for custom colors in admin_interface
+
+    # 🔹 Admin Tools & Graphs
+    'admin_tools_stats',  # Graphite dashboard
+    # 'django_nvd3',  # Uncomment if needed for charts
+    # 'django_light',  # Uncomment if using a lightweight admin theme
+    'registration',  # User registration
+    # 🔹 Django Core Apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework_simplejwt',
+    'rangefilter',
+
+    # 🔹 REST Framework & Security
     'rest_framework',
+    'rest_framework_simplejwt',
     'corsheaders',
+
+    # 🔹 Custom Apps
     'blog_api',
+
+    # 🔹 Cloud Storage
     'cloudinary_storage',
     'cloudinary',
     
+    'djangobower',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -46,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'blog_api.middleware.TrackUserActivityMiddleware'# Add into main module
 ]
 
 REST_FRAMEWORK = {
@@ -113,17 +131,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL', 'sqlite:///db.sqlite3'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'penecho',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 
-# extract
-databaseurl=os.environ.get("DATABASE_URL")
-# postgresql://blogger_database_cb5e_user:jZLk6EsGCIZfTsNR2a02y3EZZ3PBSMVy@dpg-cqkbq7qju9rs738kf6k0-a.oregon-postgres.render.com/blogger_database_cb5e
-
-
-
-DATABASES["default"]=dj_database_url.parse(databaseurl)
 AAUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -198,3 +216,64 @@ LOGGING = {
         },
     },
 }
+
+
+# JAZZMIN_SETTINGS = {
+#     # Site Branding
+#     "site_title": "My Admin",
+#     "site_header": "My Admin Panel",
+#     "site_brand": "Your Site",
+#     "site_icon": "static/images/favicon.png",
+    
+#     # User Avatar (Ensure it correctly references a user profile field)
+#     "user_avatar": "user.profile.image",
+
+#     # Custom Links in Sidebar
+#     "custom_links": {
+#         "books": [
+#             {"name": "Home", "url": "admin:index", "icon": "fas fa-home"},
+#             {
+#                 "name": "Support",
+#                 "url": "https://github.com/farridav/django-jazzmin/issues",
+#                 "icon": "fas fa-life-ring",
+#                 "new_window": True,
+#             },
+#         ],
+#     },
+
+#     # Sidebar Configuration
+#     "show_sidebar": True,
+#     "navigation_expanded": True,
+
+#     # Sidebar Icons (FontAwesome)
+#     "icons": {
+#         "auth": "fas fa-users-cog",
+#         "auth.user": "fas fa-user",
+#         "books": "fas fa-book",
+#     },
+
+#     # UI Builder
+#     "show_ui_builder": True,
+
+#     # Change Form Format
+#     "changeform_format": "carousel",
+# }
+
+
+
+# chart_settings 
+ADMIN_CHARTS_NVD3_JS_PATH = 'bow/nvd3/build/nv.d3.js'
+ADMIN_CHARTS_NVD3_CSS_PATH = 'bow/nvd3/build/nv.d3.css'
+ADMIN_CHARTS_D3_JS_PATH = 'bow/d3/d3.js'
+
+
+REGISTRATION_OPEN = True
+# One-week activation window; you may, of course, use a different value.
+ACCOUNT_ACTIVATION_DAYS = 7
+# If True, the user will be automatically logged in.
+REGISTRATION_AUTO_LOGIN = True
+# The page you want users to arrive at after they successfully log in
+LOGIN_REDIRECT_URL = '/rango/'
+# The page users are directed to if they are not logged in,
+# and are trying to access pages requiring authentication
+LOGIN_URL = '/accounts/login/'
